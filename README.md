@@ -5,3 +5,7 @@
 - 두번째
 
 [안내글](codes/10_powershell.sh)
+- serching Command : [명령어](codes/10_powershell.sh)
+- file & directory Command : [명령어](codes/10_powershell.sh)
+
+## Quest
