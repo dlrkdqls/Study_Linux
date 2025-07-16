@@ -215,5 +215,5 @@ my_project/src/main.py 파일을 my_project/src/app.py로 이름을 변경하시
 ```
 my_project/docs/README.md 파일을 my_project/ 디렉터리로 이동하시오.
 ```shell
-mv my_project/docs/README.md my_project/
+[kangbeen@localhost ~]$ mv my_project/docs/README.md my_project/
 ```
