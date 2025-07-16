@@ -154,11 +154,11 @@ cd ../dev/../../config/
 
 ### D
 cp manual.txt ../../tests/unit/backup.txt
-오류 없음
+오류 있음
 
 #### E
 mv api_copy.md ../../../src/main/
-오류 없음
+오류 있음
 
 ### 6-2. 경로 최적화
 다음 상대 주소를 더 간단하게 최적화하시오:
