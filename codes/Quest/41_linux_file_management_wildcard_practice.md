@@ -181,13 +181,17 @@ mv ./old_* ./archives
 \# 모든 .tmp 파일을 삭제하세요 (주의: 실제로는 신중히 실행)
 
 \# 명령어를 작성하세요:
-
+```
+rm *.tmp
+```
 ### 4-2. 특정 패턴 파일 삭제
 
 \# "temp"로 시작하는 모든 파일을 삭제하세요
 
 \# 명령어를 작성하세요:
-
+```
+rm temp*
+```
 ### 4-3. 백업 파일 정리
 
 \# 2023년 백업 파일만 삭제하세요 (backup\_2023.tar)
@@ -201,7 +205,9 @@ mv ./old_* ./archives
 \# 힌트: 확장자가 .jpg, .png, .gif, .txt, .csv, .tar, .dat, .pdf, .ppt, .xls가 아닌 파일
 
 \# 명령어를 작성하세요:
-
+```
+rm {!*.???}
+```
 ---
 
 ## 5\. 복합 명령어 실습
@@ -209,33 +215,55 @@ mv ./old_* ./archives
 ### 5-1. 파일 정리 시스템
 
 \# 1단계: 모든 이미지 파일(.jpg, .png, .gif)을 images 디렉터리로 이동
-
+```
+mv *.{jpgm,png,gif} images/
+```
 \# 2단계: 모든 문서 파일(.pdf, .ppt, .xls, .md)을 documents 디렉터리로 이동
-
+```
+mv *.{pdf,ppt,xls,md} documents/
+```
 \# 3단계: 모든 데이터 파일(.csv, .dat)을 data 디렉터리로 이동 (없으면 생성)
 
 \# 명령어들을 작성하세요:
-
+```
+mkdir -p backup/txt_files && cp *.txt backup/txt_files/
+```
 ### 5-2. 백업 및 정리 작업
 
 \# 1단계: 모든 .txt 파일을 backup/txt\_files 디렉터리로 복사 (디렉터리 생성 필요)
-
+```
+mkdir -p backup/config && cp *.conf backup/config/
+```
 \# 2단계: 모든 설정 파일(.conf)을 backup/config 디렉터리로 복사
-
+```
+cp *.conf ./backup/config/ 
+```
 \# 3단계: 원본 설정 파일들을 삭제
-
+```
+rm *.conf
+```
 \# 명령어들을 작성하세요:
 
 ### 5-3. 날짜별 로그 정리
 
 \# 1단계: logs 디렉터리에 error, access, system 하위 디렉터리 생성
-
+```
+mkdir -p logs/{error,access,system}
+```
 \# 2단계: log\_error.txt를 logs/error/로 이동
+```
+mv ./log_error.txt logs/error/
+```
 
 \# 3단계: log\_access.txt를 logs/access/로 이동
+```
+mv ./log_error.txt logs/error/
+```
 
 \# 4단계: log\_system.txt를 logs/system/로 이동
-
+```
+mv ./log_error.txt logs/system/
+```
 \# 명령어들을 작성하세요:
 
 ---
