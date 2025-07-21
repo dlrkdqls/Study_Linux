@@ -245,7 +245,6 @@ backup 디렉토리가 존재하는지 확인
 ls 
 nano check_dir.sh
 ls -l && echo 'backup 디렉토리가 없습니다'
-chmod 755 check_dir.sh
 ```
 
 #### **7-3. 다중 명령어 조건 실행**
@@ -266,8 +265,7 @@ cd project_logs/ && echo '"로그 생성 완료"' > log.txt
 
 명령어를 작성하세요:
 ```
-chmod 755 check_dir.sh
-ls -l check_dir.sh
+chmod 100 check_dir.sh && ls -l check_dir.sh
 ```
 \# 사용자에게만 실행 권한 부여 및 권한 확인
 
