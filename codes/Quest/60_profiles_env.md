@@ -32,7 +32,7 @@ echo "Welcome,$USER"
 ```
 nano .bash_profile 
 
-rm -r -- ~/Downloads/*
+rm -- ~/Downloads/*
 ```
   ---
 
