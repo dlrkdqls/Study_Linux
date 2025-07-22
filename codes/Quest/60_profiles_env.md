@@ -78,8 +78,10 @@ echo "Test message for logs" > /Downloads/auto_created/logs/log.txt
 
   ---
 ```
-sudo bash -c echo "Anouncement" >> /etc/login_notice.txt
+nano /etc/profile
 
-sudo bash -c echo "cat /etc/login_notice.txt" >> /etc/profile
+sudo bash -c "echo 'Anouncement' >> /etc/login_notice.txt"
+
+sudo bash -c "echo 'cat /etc/login_notice.txt' >> /etc/profile"
 ```
 
