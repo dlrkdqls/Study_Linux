@@ -101,7 +101,12 @@ bash wordcount.sh
 Enter filename: sample.txt
 
 Word count in sample.txt: 123
+```
+read -p "Enter filename : " filename
+echo -n "Word count in $filename : "
+wc -w "$filename" | cut -d " " -f1
 
+```
 ---
 
 ### **✅ \[문제 2\] 특정 단어 검색 및 빈도수 세기**
@@ -123,7 +128,11 @@ Word count in sample.txt: 123
 bash count\_keyword.sh error logfile.txt
 
 The word 'error' appeared 5 times.
+```
+V_GREP=$(grep -i "$1" "$2" | wc -l)
+echo "The word '$1' appeared $V_GREP times"
 
+```
 ---
 
 ### **✅ \[문제 3\] 고유 단어 목록 만들기**
