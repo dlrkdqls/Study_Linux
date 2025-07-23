@@ -228,21 +228,21 @@ sort -t":" -k2 -nr employees.txt | cut -d ":" -f1 | sed -n "1p"
 
 * \# 명령어를 작성하세요
 ```
-
+sort -r fruits.txt > fruits_reverse.txt
 ```
 
 **10-2.** `employees.txt` 파일에서 Seoul 거주자 정보를 `seoul_employees.txt` 파일에 저장하세요.
 
 * \# 명령어를 작성하세요
 ```
-
+grep "Seoul" employees.txt > seoul_employees.txt
 ```
 
 **10-3.** `system.log` 파일의 에러 메시지만 추출하여 `errors.txt` 파일에 저장하세요.
 
 * \# 명령어를 작성하세요  
 ```
-
+grep "ERROR" system.log > errors.txt
 ```
 
   ## **문제 11: 종합 문제 (고급)**
@@ -251,14 +251,14 @@ sort -t":" -k2 -nr employees.txt | cut -d ":" -f1 | sed -n "1p"
 
 * \# 명령어를 작성하세요
 ```
-
+cat employees.txt | sort -t: -k3 -r
 ```
 
 **11-2.** `system.log` 파일에서 시간대별(시간 단위) 로그 개수를 계산하세요.
 
 * \# 명령어를 작성하세요
 ```
-
+cat system.log | sort -t: -k 1 | cut -d " " -f 2 | uniq -c
 ```
 
 **11-3.** `scores.txt` 파일에서 100점 이상인 점수들만 추출하여 평균을 구하세요. (hint: `bc` 명령어 사용)
