@@ -166,6 +166,10 @@ if [ "$subject" != "$M" ] && [ "$subject != $E" ] && [ "$subject" != "$S" ]; the
   return 1
 fi
 
+#해당 과목의 모든 점수를 추출하여 정렬된 목록 출력
+cat students.txt | cut -d ":" -f | sort
+
+~                                      
 ```
 * `cut`, `grep`, `sort`, `wc` 명령어 활용  
 * 파이프라인으로 명령어 연결  
