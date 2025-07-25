@@ -157,15 +157,22 @@ EOF
 #elif
 #fi
 
-M="수학"
-E="영어"
-S="과학"
+v_math="수학"
+v_english="영어"
+v_science="과학"
 
-if [ "$subject" != "$M" ] && [ "$subject != $E" ] && [ "$subject" != "$S" ]; then
-  echo "유효하지 않은 과목입니다."
-  return 1
+read -p "input subjcet : " v_subject
+
+if [ "$v_math" = "$v_subject" ] ; then
+        echo "in word! $v_match" ;
+elif [ "$v_english" = "$v_subject" ] ; then
+        echo "in word! $v_english" ;
+elif [ "$v_english" =  "$v_subject" ] ; then
+        echo "in word! $v_science" ;
+else
+  echo "not in word!"
 fi
-
+~                    
 #해당 과목의 모든 점수를 추출하여 정렬된 목록 출력
 cat students.txt | cut -d ":" -f | sort
 
