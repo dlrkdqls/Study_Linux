@@ -44,12 +44,11 @@
  11 
  12 #
  13 if [ "$1" == "status" ]; then
- 14    if [ -n "$PID" ] && ps -p "$PID" > /dev/null 2>&1;     then
- 15     echo "서버 실행 중입니다. PID: $PID"
- 16   else
- 17     echo "서버가 꺼져 있습니다."
- 18   fi
- 19 fi
+ 14   ps aux | grep "http" > /dev/null
+ 15   if [ $? -eq 0 ]; then
+ 16     echo "서버 실행 중입니다. PID: $PID"
+ 17   fi
+ 18 
  20 
  21 if [ "$1" == "stop" ]; then 
  22     kill -9 "$PID"
